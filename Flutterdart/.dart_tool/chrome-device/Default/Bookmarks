@@ -1,5 +1,5 @@
 {
-   "checksum": "4eb0210cc0a8fa312866d70a44cb6f1a",
+   "checksum": "5aaadf14adf6493adf3def3fe9ae4ce1",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -9,6 +9,8 @@
                "guid": "2aa14092-663f-459e-98c7-1820ddd0ed50",
                "id": "8",
                "name": "Dell",
+               "show_icon": false,
+               "source": "unknown",
                "type": "url",
                "url": "http://www1.ap.dell.com/content/default.aspx?c=in&l=en&s=gen"
             }, {
@@ -17,6 +19,8 @@
                "guid": "bd58bb27-4c75-4ca7-a542-bd53442158cc",
                "id": "9",
                "name": "Support.Dell.Com",
+               "show_icon": false,
+               "source": "unknown",
                "type": "url",
                "url": "http://www.dell.com/support/home"
             } ],
@@ -26,6 +30,7 @@
             "guid": "b915ee26-8d2d-47af-8b63-fb27d5706c08",
             "id": "7",
             "name": "Dell",
+            "source": "unknown",
             "type": "folder"
          }, {
             "date_added": "13276868391665110",
@@ -33,6 +38,8 @@
             "guid": "b0bb8b52-1105-4281-ab85-7c9a8beba65d",
             "id": "10",
             "name": "Gmail",
+            "show_icon": false,
+            "source": "unknown",
             "type": "url",
             "url": "https://accounts.google.com/b/0/AddMailService"
          }, {
@@ -41,6 +48,8 @@
             "guid": "eb7164d6-4141-47d9-80c3-242f3ede40f5",
             "id": "11",
             "name": "YouTube",
+            "show_icon": false,
+            "source": "unknown",
             "type": "url",
             "url": "https://youtube.com/"
          }, {
@@ -49,6 +58,8 @@
             "guid": "6a467706-b319-4f06-818b-e720346bf30c",
             "id": "12",
             "name": "Monkeytype",
+            "show_icon": false,
+            "source": "unknown",
             "type": "url",
             "url": "https://monkeytype.com/"
          }, {
@@ -57,15 +68,48 @@
             "guid": "7a2fc6b6-1358-4edb-abcc-0350668a4465",
             "id": "13",
             "name": "Thank you for downloading IntelliJ IDEA!",
+            "show_icon": false,
+            "source": "unknown",
             "type": "url",
             "url": "https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows&code=IIC"
+         }, {
+            "children": [ {
+               "date_added": "13243059706170447",
+               "date_last_used": "0",
+               "guid": "c236ef31-1742-4314-9e3e-14ecf5409cd3",
+               "id": "17",
+               "name": "Lenovo Support",
+               "show_icon": false,
+               "source": "import_fre",
+               "type": "url",
+               "url": "http://support.lenovo.com/"
+            }, {
+               "date_added": "13243059706178505",
+               "date_last_used": "0",
+               "guid": "45eb3dc9-873f-49fa-9038-eaa2b1b6f2dd",
+               "id": "19",
+               "name": "Lenovo",
+               "show_icon": false,
+               "source": "import_fre",
+               "type": "url",
+               "url": "http://www.lenovo.com/"
+            } ],
+            "date_added": "13354034531179846",
+            "date_last_used": "0",
+            "date_modified": "0",
+            "guid": "c30e01e4-f6c7-4f8e-bb64-33c7ada0f610",
+            "id": "16",
+            "name": "Lenovo",
+            "source": "import_fre",
+            "type": "folder"
          } ],
          "date_added": "13352754180152396",
          "date_last_used": "0",
-         "date_modified": "13314107378879525",
+         "date_modified": "0",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
-         "name": "Bookmarks bar",
+         "name": "Favorites bar",
+         "source": "unknown",
          "type": "folder"
       },
       "other": {
@@ -75,7 +119,8 @@
          "date_modified": "0",
          "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
          "id": "2",
-         "name": "Other bookmarks",
+         "name": "Other favorites",
+         "source": "unknown",
          "type": "folder"
       },
       "synced": {
@@ -85,7 +130,8 @@
          "date_modified": "0",
          "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
          "id": "3",
-         "name": "Mobile bookmarks",
+         "name": "Mobile favorites",
+         "source": "unknown",
          "type": "folder"
       }
    },

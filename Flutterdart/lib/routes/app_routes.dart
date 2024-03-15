@@ -1,6 +1,7 @@
 import 'dart:js';
 
 import 'package:flutter/material.dart';
+import 'package:treesa_s_application2/presentation/event_calendar.dart';
 import 'package:treesa_s_application2/presentation/forgot_password/forgot_password_page_screen.dart';
 import 'package:treesa_s_application2/presentation/login_screen/login_screen.dart';
 import 'package:treesa_s_application2/presentation/mental_health_assessmenteight_screen/mental_health_assessmenteight_screen.dart';
@@ -15,6 +16,7 @@ import 'package:treesa_s_application2/presentation/sessions_screen/sessions_scre
 import 'package:treesa_s_application2/presentation/app_navigation_screen/app_navigation_screen.dart';
 import 'package:treesa_s_application2/presentation/resetpassword/reset_password_page_screen.dart';
 import 'package:treesa_s_application2/presentation/mental_health_assessmentfourth_screen//mental_health_assessmentfourth_screen.dart';
+
 class AppRoutes {
   static const String loginScreen = '/login_screen';
 
@@ -26,21 +28,28 @@ class AppRoutes {
 
   static const String sessionsScreen = '/sessions_screen';
 
+  static get eventcalendarscreen => '/event_calendar';
+
   static const String appNavigationScreen = '/app_navigation_screen';
 
   static const String forgotPasswordPageScreen = '/forgot_password_page_screen';
 
   static const String resetPasswordPageScreen = '/reset_password_page_screen';
 
-  static const String mentalhealthassessmentfourteenScreen = '/mental_health_assessmentfourth_screen';
+  static const String mentalhealthassessmentfourteenScreen =
+      '/mental_health_assessmentfourth_screen';
 
+  static const String mentalHealthAssessmenteightScreen =
+      '/mental_health_assessmenteight_screen';
+  static const String mentalHealthAssessmentoneScreen =
+      '/mental_health_assessmentone_screen';
+  static const String mentalHealthAssessmentwoScreen =
+      '/mental_healthtwo_screen';
+  static const String mentalHealthAssessmenthreeScreen =
+      '/mental_health_three_screen';
 
-  static const String mentalHealthAssessmenteightScreen ='/mental_health_assessmenteight_screen';
-static const String mentalHealthAssessmentoneScreen ='/mental_health_assessmentone_screen';
-static const String mentalHealthAssessmentwoScreen ='/mental_healthtwo_screen';
-static const String mentalHealthAssessmenthreeScreen ='/mental_health_three_screen';
-
-static const String mentalHealthAssessmentfifthScreen ='/mental_healthfifth_screen';
+  static const String mentalHealthAssessmentfifthScreen =
+      '/mental_healthfifth_screen';
 
   static Map<String, WidgetBuilder> routes = {
     loginScreen: (context) => LoginScreen(),
@@ -51,13 +60,22 @@ static const String mentalHealthAssessmentfifthScreen ='/mental_healthfifth_scre
     appNavigationScreen: (context) => AppNavigationScreen(),
     forgotPasswordPageScreen: (context) => ForgotPasswordPageScreen(),
     resetPasswordPageScreen: (context) => ResetPasswordPageScreen(),
-    mentalhealthassessmentfourteenScreen: (context) => MentalHealthAssessmentfourteenScreen(username: 'username'),
-    mentalHealthAssessmenteightScreen: (context) => MentalHealthAssessmenteightScreen(username: 'username'),
-  mentalHealthAssessmentoneScreen: (context) => MentalHealthAssessmentoneScreen(username: 'username', text: 'text', imagePath: 'imagePath',),
-    mentalHealthAssessmentwoScreen: (context) =>  MentalHealthAssessmentwoScreen(username: 'username'),
-  mentalHealthAssessmenthreeScreen: (context) => MentalHealthAssessmenthreeScreen(username: 'username'),
-  mentalHealthAssessmentfifthScreen: (context) => MentalHealthAssessmenfifthScreen(username: 'username'),
-  
-
+    mentalhealthassessmentfourteenScreen: (context) =>
+        MentalHealthAssessmentfourteenScreen(username: 'username'),
+    mentalHealthAssessmenteightScreen: (context) =>
+        MentalHealthAssessmenteightScreen(username: 'username'),
+    mentalHealthAssessmentoneScreen: (context) =>
+        MentalHealthAssessmentoneScreen(
+          username: 'username',
+          text: 'text',
+          imagePath: 'imagePath',
+        ),
+    mentalHealthAssessmentwoScreen: (context) =>
+        MentalHealthAssessmentwoScreen(username: 'username'),
+    mentalHealthAssessmenthreeScreen: (context) =>
+        MentalHealthAssessmenthreeScreen(username: 'username'),
+    mentalHealthAssessmentfifthScreen: (context) =>
+        MentalHealthAssessmenfifthScreen(username: 'username'),
+    eventcalendarscreen: (context) => EventCalendarScreen(),
   };
 }

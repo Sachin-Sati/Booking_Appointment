@@ -15,13 +15,12 @@ class SignupScreen extends StatelessWidget {
   TextEditingController passwordController = TextEditingController();
 
   TextEditingController emailController = TextEditingController();
-      
+
   TextEditingController mobileController = TextEditingController();
-  
 
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-Future<void> signup(BuildContext context) async {
+  Future<void> signup(BuildContext context) async {
     if (_formKey.currentState!.validate()) {
       String username = userNameController.text;
       String password = passwordController.text;
@@ -34,17 +33,17 @@ Future<void> signup(BuildContext context) async {
       // Make a request to your server with username and password
       try {
         var response = await http.post(
-        Uri.parse('http://127.0.0.1:5000/signup'),
-        headers: <String, String>{
-          'Content-Type': 'application/json; charset=UTF-8',
-        },
-        body: jsonEncode(<String, String>{
-          'username': username,
-          'password': password,
-          'email': email,
-          'mobile_number': mobile_number,
-        }),
-      );
+          Uri.parse('http://127.0.0.1:5000/signup'),
+          headers: <String, String>{
+            'Content-Type': 'application/json; charset=UTF-8',
+          },
+          body: jsonEncode(<String, String>{
+            'username': username,
+            'password': password,
+            'email': email,
+            'mobile_number': mobile_number,
+          }),
+        );
         print(response.statusCode);
         if (response.statusCode == 201) {
           // If the server returns a 200 OK response,
@@ -63,6 +62,7 @@ Future<void> signup(BuildContext context) async {
       }
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -96,11 +96,11 @@ Future<void> signup(BuildContext context) async {
                                       controller: userNameController,
                                       hintText: "Username",
                                       validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter a username';
-                }
-                return null;
-              },
+                                        if (value == null || value.isEmpty) {
+                                          return 'Please enter a username';
+                                        }
+                                        return null;
+                                      },
                                       prefix: Container(
                                           margin: EdgeInsets.fromLTRB(
                                               18.h, 14.v, 13.h, 14.v),
@@ -118,11 +118,11 @@ Future<void> signup(BuildContext context) async {
                                       controller: passwordController,
                                       hintText: "Password",
                                       validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter a password';
-                }
-                return null;
-              },
+                                        if (value == null || value.isEmpty) {
+                                          return 'Please enter a password';
+                                        }
+                                        return null;
+                                      },
                                       textInputType:
                                           TextInputType.visiblePassword,
                                       prefix: Container(
@@ -146,11 +146,11 @@ Future<void> signup(BuildContext context) async {
                                       textInputAction: TextInputAction.done,
                                       textInputType: TextInputType.emailAddress,
                                       validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter an email';
-                }
-                return null;
-              },
+                                        if (value == null || value.isEmpty) {
+                                          return 'Please enter an email';
+                                        }
+                                        return null;
+                                      },
                                       prefix: Container(
                                           margin: EdgeInsets.fromLTRB(
                                               18.h, 19.v, 13.h, 19.v),
@@ -162,26 +162,31 @@ Future<void> signup(BuildContext context) async {
                                           BoxConstraints(maxHeight: 50.v))),
                               SizedBox(height: 42.v),
                               Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 45.h),
-                      child: CustomTextFormField(
-                        controller: mobileController,
-                        hintText: "Mobile",
-                        textInputType: TextInputType.phone,
-                         validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter a mobile number';}return null;},
-                        prefix: Container(
-                          margin: EdgeInsets.fromLTRB(18.h, 19.v, 13.h, 19.v),
-                          child: CustomImageView(
-                            imagePath: ImageConstant.imgLock,
-                            height: 24.v,
-                            width: 24.h,
-                          ),
-                        ),
-                        prefixConstraints: BoxConstraints(maxHeight: 50.h),
-                      ),
-                    ),
-                      SizedBox(height: 24.v),
+                                padding: EdgeInsets.symmetric(horizontal: 45.h),
+                                child: CustomTextFormField(
+                                  controller: mobileController,
+                                  hintText: "Mobile",
+                                  textInputType: TextInputType.phone,
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return 'Please enter a mobile number';
+                                    }
+                                    return null;
+                                  },
+                                  prefix: Container(
+                                    margin: EdgeInsets.fromLTRB(
+                                        18.h, 19.v, 13.h, 19.v),
+                                    child: CustomImageView(
+                                      imagePath: ImageConstant.imgLock,
+                                      height: 24.v,
+                                      width: 24.h,
+                                    ),
+                                  ),
+                                  prefixConstraints:
+                                      BoxConstraints(maxHeight: 50.h),
+                                ),
+                              ),
+                              SizedBox(height: 24.v),
                               _buildSixtyTwo(context)
                             ])))))));
   }
@@ -226,7 +231,7 @@ Future<void> signup(BuildContext context) async {
                                           onTap: () => signup(context),
                                           // {
                                           //   onTapBtnArrowLeft(context);
-                                            
+
                                           // },
                                           child: CustomImageView(
                                               imagePath:
@@ -292,8 +297,8 @@ Future<void> signup(BuildContext context) async {
             ])));
   }
 
-  /// Navigates to the loginScreen when the action is triggered.
-//   onTapBtnArrowLeft(BuildContext context) {
-//     Navigator.pushNamed(context, AppRoutes.loginScreen);
-//   }
- }
+  // Navigates to the loginScreen when the action is triggered.
+  onTapBtnArrowLeft(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.loginScreen);
+  }
+}
