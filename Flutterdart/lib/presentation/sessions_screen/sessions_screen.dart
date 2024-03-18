@@ -8,7 +8,7 @@ import 'package:treesa_s_application2/widgets/app_bar/custom_app_bar.dart';
 import 'package:treesa_s_application2/widgets/custom_drop_down.dart';
 import 'package:treesa_s_application2/widgets/custom_icon_button.dart';
 
-class SessionsScreen extends StatefulWidget {
+class SessionsScreen extends StatelessWidget {
   SessionsScreen({Key? key})
       : super(
           key: key,
@@ -20,6 +20,8 @@ class SessionsScreen extends StatefulWidget {
     "Session 2",
     "Session 3",
   ];
+
+  int selectedSessionIndex = 0; // Initialize the selected session index
 
   @override
   Widget build(BuildContext context) {
@@ -647,21 +649,18 @@ class SessionsScreen extends StatefulWidget {
             ),
             hintText: "All Sessions",
             items: dropdownItemList,
-            value:
-                dropdownItemList[selectedSessionIndex], // Set the initial value
-            onChanged: (value) {
-              setState(() {
-                if (value == "Session 1") {
-                  selectedSessionIndex = 1;
-                } else if (value == "Session 2") {
-                  selectedSessionIndex = 2;
-                } else if (value == "Session 3") {
-                  selectedSessionIndex = 3;
-                } else {
-                  selectedSessionIndex = 0; // All Sessions
-                }
-              });
-            },
+            value: dropdownItemList[selectedSessionIndex],
+            // onChanged: (value) {
+            //   if (value == "Session 1") {
+            //       selectedSessionIndex = 1;
+            //     } else if (value == "Session 2") {
+            //       selectedSessionIndex = 2;
+            //     } else if (value == "Session 3") {
+            //       selectedSessionIndex = 3;
+            //     } else {
+            //       selectedSessionIndex = 0;
+            //     }
+            // },
           ),
           CustomImageView(
             imagePath: ImageConstant.imgFaSort,

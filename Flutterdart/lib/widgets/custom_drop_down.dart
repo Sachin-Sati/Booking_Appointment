@@ -20,6 +20,7 @@ class CustomDropDown extends StatelessWidget {
     this.contentPadding,
     this.validator,
     this.onChanged,
+    required String value,
   }) : super(
           key: key,
         );
